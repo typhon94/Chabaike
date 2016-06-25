@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#6c24ca"
+    android:orientation="horizontal"
+    android:layout_alignParentTop="true"
+
+    android:id="@+id/show_topll">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="25dp"
+
+        android:text="CBK_1.0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:onClick="onSet"
+        android:id="@+id/setting"
+        android:text="设置"/>
+
+</RelativeLayout>
+   <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/show_wv"
+       android:layout_above="@+id/show_ll"
+       android:layout_below="@id/show_topll"
+       >
+
+   </WebView>
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/show_ll"
+       >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_height="50dp"
+            android:id="@+id/show_back"
+            android:onClick="onBack"
+            android:background="@drawable/contentback"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_height="50dp"
+            android:id="@+id/show_share"
+            android:onClick="onShare"
+            android:background="@drawable/contentshare"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/show_col"
+            android:onClick="onCollection"
+            android:background="@drawable/collectcontent"/>
+    </LinearLayout>
+</RelativeLayout>
